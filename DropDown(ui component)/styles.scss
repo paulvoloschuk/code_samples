@@ -1,0 +1,23 @@
+.container {
+  position: fixed;
+  background: white;
+  overflow: hidden;
+  border-radius: 5px;
+  outline: none;
+  z-index: 10;
+  box-shadow: 0 10px 50px 0 rgba(43, 59, 59, .25);
+  transition: opacity .2s ease-in-out, transform .2s ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  &.slide {
+    transform: translateY(-30px);
+    &.fromTop {
+      transform: translateY(30px);
+    }
+  }
+  &.open {
+    transform: none;
+    pointer-events: all;
+    opacity: 1;
+  }
+}
